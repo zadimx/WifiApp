@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="highlighted_text_holo_light_night">#045b80</color>
+    <color name="white">#ffffff</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="colorTextPrimary">#DD000000</color>
+    <color name="colorTextSecondary">#89000000</color>
+    <color name="colorTextDisabled">#61000000</color>
+    <color name="fonted">#e7e2e2</color>
+    <color name="blue">#1E90FF</color>
+    <color name="milk">#e7e2e2</color>
+</resources>
