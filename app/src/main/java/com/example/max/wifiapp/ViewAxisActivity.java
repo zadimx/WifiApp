@@ -253,7 +253,6 @@ public class ViewAxisActivity extends AppCompatActivity {
         }
     };
 
-//
     public static boolean hasConnection(final Context context)
     {
         ConnectivityManager cm = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
