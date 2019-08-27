@@ -1,4 +1,4 @@
-package com.example.max.wifiapp;
+package my.navareno.max.wifiapp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

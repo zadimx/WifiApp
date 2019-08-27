@@ -1,18 +1,17 @@
-package com.example.max.wifiapp;
+package my.navareno.max.wifiapp;
 
 
 import android.content.Context;
-import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Binder;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.example.max.wifiapp.R;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -104,7 +103,7 @@ public class ViewAxisActivity extends AppCompatActivity {
                                                         String delimeter = "\n"; // Разделитель
                                                         subStr = string.split(delimeter);
 //                                    String[] numberOnly = new String[subStr.length];
-                                                        if (subStr.length == 2) {
+                                                        if (subStr.length > 2) {
                                                             for (int i = 0; i < subStr.length; i++) {
                                                                 subStr[i] = subStr[i].replaceAll("[^0-9]", "");
                                                             }
@@ -119,7 +118,7 @@ public class ViewAxisActivity extends AppCompatActivity {
                                                         if (string.contains("sgkjhcxk")) {
                                                             Log.d("TT$", "wwwwwwwww sensors:2");
 
-                                                            mServer.sendData("sensors:2\r\n".getBytes());
+                                                            mServer.sendData("sensors:10\r\n".getBytes());
                                                         }
                                                         if (string.contains("expect")) {
                                                             Log.d("TT$", "wwwwwwwww give");
@@ -130,7 +129,7 @@ public class ViewAxisActivity extends AppCompatActivity {
                                                         if (string.contains("quantitySens")) {
                                                             Log.d("TT$", "wwwwwwwww expect:2");
 
-                                                            mServer.sendData("expect:2\r\n".getBytes());
+                                                            mServer.sendData("expect:10\r\n".getBytes());
 
                                                         }
                                                         if (subStr[0].matches("\\d+")) {
@@ -178,7 +177,7 @@ public class ViewAxisActivity extends AppCompatActivity {
 
                 viewConnect.setText("Подключено");
 
-                if (subStr != null && subStr.length == 2) {
+                if (subStr != null && subStr.length > 2) {
                     for (int j = 0; j < subStr.length; j++) {
                                 String s = subStr[j].replaceAll("[^0-9]", "");
                                 int weight = Integer.parseInt(s);

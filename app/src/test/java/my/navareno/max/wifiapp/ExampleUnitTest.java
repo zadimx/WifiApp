@@ -1,4 +1,4 @@
-package com.example.max.wifiapp;
+package my.navareno.max.wifiapp;
 
 import org.junit.Test;
 
