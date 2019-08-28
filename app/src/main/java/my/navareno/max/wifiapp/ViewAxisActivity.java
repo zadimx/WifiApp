@@ -78,25 +78,20 @@ public class ViewAxisActivity extends AppCompatActivity {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                        Log.d("TT$", "11111111 "+flagStarWIFI);
                     if (ViewAxisActivity.hasConnection(ViewAxisActivity.this)) {
                         if (flagStarWIFI) {
-                            Log.d("TT$", "Получили555555555555555555 "+mSocket);
                             flagStarWIFI = false;
                             new Thread(new Runnable() {
                                 @Override
                                 public void run() {
                                     try {
-                                        Log.d("TT$", "Получили555555555555555555 "+mSocket);
 //                    mServer.openConnection();
 //                    Log.d("TT$", ViewAxisActivity.hasConnection(ViewAxisActivity.this)+"55655511");
                                         try {
                                             try {
                                                 mServer.openConnection();
-                                                Log.d("TT$", "Получили "+mSocket);
                                                 while (true) {
 //                                Log.d("TT$", ViewAxisActivity.hasConnection(ViewAxisActivity.this)+"556555");
-                                                    Log.d("TT$", "Получили " + string);
 //                                Thread.sleep(1000);
                                                     if (ViewAxisActivity.hasConnection(ViewAxisActivity.this)) {
                                                         runOnUiThread(runn1);
@@ -109,32 +104,30 @@ public class ViewAxisActivity extends AppCompatActivity {
                                                             }
                                                         }
 
-                                                        Log.d("TT$", "COuntArray " + subStr.length);
                                                         if (flagStar) {
                                                             mServer.sendData("start".getBytes());
                                                             flagStar = false;
-                                                            Log.d("TT$", "wwwwwwwww start");
+
                                                         }
                                                         if (string.contains("sgkjhcxk")) {
-                                                            Log.d("TT$", "wwwwwwwww sensors:2");
+
 
                                                             mServer.sendData("sensors:10\r\n".getBytes());
                                                         }
                                                         if (string.contains("expect")) {
-                                                            Log.d("TT$", "wwwwwwwww give");
+
 
                                                             mServer.sendData("give\r\n".getBytes());
 
                                                         }
                                                         if (string.contains("quantitySens")) {
-                                                            Log.d("TT$", "wwwwwwwww expect:2");
 
-                                                            mServer.sendData("expect:10\r\n".getBytes());
+
+                                                            mServer.sendData("expect:5\r\n".getBytes());
 
                                                         }
                                                         if (subStr[0].matches("\\d+")) {
                                                             Thread.sleep(1000);
-                                                            Log.d("TT$", "wwwwwwwww giveNumber");
 
                                                             mServer.sendData("give\r\n".getBytes());
                                                         }
@@ -169,7 +162,6 @@ public class ViewAxisActivity extends AppCompatActivity {
 
     Runnable runn1 = new Runnable() {
         public void run() {
-            Log.d("TT$", "Изменить");
 
             if (ViewAxisActivity.hasConnection(ViewAxisActivity.this)) {
 
@@ -185,7 +177,6 @@ public class ViewAxisActivity extends AppCompatActivity {
                                 int weightData = 0x0000ffff & weight;
 
                                 weightData = (int) (-862.5 + 1.725 * weightData);
-                                Log.d("TT$", "БІТЬ!!!!!!"+weightData);
                                 if (weightNumberSensor == 1) {
                                     viewAxisLeft1.setText(weightData+"");
                                     sumAxis[weightNumberSensor-1]=weightData;
@@ -243,7 +234,6 @@ public class ViewAxisActivity extends AppCompatActivity {
                         }
 
                     }
-                    Log.d("TT$", "Изменить---------");
                 }
             } else {
                 viewConnect.setTextColor(Color.RED);
@@ -325,8 +315,6 @@ public class ViewAxisActivity extends AppCompatActivity {
             Thread.sleep(1000);
             int count = mSocket.getInputStream().read(buffer, 0, buffer.length);
             string = new String(buffer, 0, count);
-
-            Log.d("%%%^",string+"FG ");
 
 
         } catch (IOException e) {

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.max.wifiapp.my.example.max.wifiapp.ViewAxisActivity"
+    tools:context="my.navareno.max.wifiapp.ViewAxisActivity"
     android:orientation="vertical"
     android:background="@color/milk">
 
@@ -34,7 +34,6 @@
             android:paddingLeft="@dimen/pad_axis"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisSum1"
@@ -43,7 +42,6 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textSize="@dimen/size_axis_sum"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisRight1"
@@ -53,7 +51,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
     </RelativeLayout>
 
@@ -74,7 +71,6 @@
             android:paddingLeft="@dimen/pad_axis"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisSum2"
@@ -83,7 +79,6 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
             android:textSize="@dimen/size_axis_sum"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisRight2"
@@ -93,7 +88,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
@@ -113,7 +107,6 @@
             android:paddingLeft="@dimen/pad_axis"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisSum3"
@@ -122,7 +115,6 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_axis_sum"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisRight3"
@@ -132,7 +124,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
@@ -152,7 +143,6 @@
             android:paddingLeft="@dimen/pad_axis"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisSum4"
@@ -161,7 +151,6 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_axis_sum"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisRight4"
@@ -171,7 +160,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
@@ -191,7 +179,6 @@
             android:paddingLeft="@dimen/pad_axis"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisSum5"
@@ -200,7 +187,6 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:textSize="@dimen/size_axis_sum"
-            android:text="3,5т"
             android:textColor="@color/white"/>
         <TextView
             android:id="@+id/viewAxisRight5"
@@ -210,7 +196,6 @@
             android:layout_centerVertical="true"
             android:layout_alignParentRight="true"
             android:textSize="@dimen/size_text_axis_one"
-            android:text="3,5т"
             android:textColor="@color/white"/>
     </RelativeLayout>
 
