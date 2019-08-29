@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
-import com.example.max.wifiapp.R;
 
 import java.io.IOException;
 import java.net.InetAddress;
