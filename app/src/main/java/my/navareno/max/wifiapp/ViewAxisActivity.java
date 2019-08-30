@@ -43,6 +43,9 @@ public class ViewAxisActivity extends AppCompatActivity {
     private TextView viewAxisSum3;
     private TextView viewAxisSum4;
     private TextView viewAxisSum5;
+    private TextView weightAllText;
+    private TextView weightTruckText;
+    private TextView weightTrailerText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +67,9 @@ public class ViewAxisActivity extends AppCompatActivity {
         viewAxisSum3 = findViewById(R.id.viewAxisSum3);
         viewAxisSum4 = findViewById(R.id.viewAxisSum4);
         viewAxisSum5 = findViewById(R.id.viewAxisSum5);
+        weightAllText = findViewById(R.id.weightAllText);
+        weightTruckText = findViewById(R.id.weightTruckText);
+        weightTrailerText = findViewById(R.id.weightTrailerText);
         mServer = new ViewAxisActivity();
 
 
@@ -175,7 +181,7 @@ public class ViewAxisActivity extends AppCompatActivity {
                                 int weightNumberSensor = (0xffff0000 & weight) >> 16;
                                 int weightData = 0x0000ffff & weight;
 
-                                weightData = (int) (-862.5 + 1.725 * weightData);
+//                                weightData = (int) (-862.5 + 1.725 * weightData);
                                 if (weightNumberSensor == 1) {
                                     viewAxisLeft1.setText(weightData+"");
                                     sumAxis[weightNumberSensor-1]=weightData;
@@ -230,6 +236,18 @@ public class ViewAxisActivity extends AppCompatActivity {
                         }
                         if (sumAxis[8] != 0 && sumAxis[9] != 0) {
                             viewAxisSum5.setText(sumAxis[8]+sumAxis[9]+"");
+                        }
+                        if (sumAxis[2] != 0 && sumAxis[3] != 0
+                                && sumAxis[4] != 0 && sumAxis[5] != 0 && sumAxis[6] != 0
+                                && sumAxis[7] != 0 && sumAxis[8] != 0 && sumAxis[9] != 0) {
+                            weightAllText.setText(sumAxis[2]+sumAxis[3]+sumAxis[4]+sumAxis[5]
+                                    +sumAxis[6]+sumAxis[7]+sumAxis[8]+sumAxis[9]+"");
+                        }
+                        if (sumAxis[2] != 0 && sumAxis[3] != 0 && sumAxis[4] != 0 && sumAxis[5] != 0) {
+                            weightTruckText.setText(sumAxis[2]+sumAxis[3]+sumAxis[4]+sumAxis[5]+"");
+                        }
+                        if (sumAxis[6] != 0 && sumAxis[7] != 0 && sumAxis[8] != 0 && sumAxis[9] != 0) {
+                            weightTrailerText.setText(sumAxis[6]+sumAxis[7]+sumAxis[8]+sumAxis[9]+"");
                         }
 
                     }

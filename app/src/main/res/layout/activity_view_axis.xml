@@ -5,21 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="my.navareno.max.wifiapp.ViewAxisActivity"
-    android:orientation="vertical"
-    android:background="@color/milk">
+    android:background="@color/milk"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/viewConnect"
+        android:layout_weight="0.1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/blue"
-        android:textSize="20sp"
-        />
+        android:textSize="20sp"/>
     <RelativeLayout
-        android:layout_weight="5"
+        android:id="@+id/weightAllLayout"
+        android:layout_weight="0.5"
         android:layout_width="@dimen/size_axis"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal">
+    <ImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/v2"/>
+        <TextView
+            android:id="@+id/weightAllText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/axis_1"
+        android:layout_weight="1"
+        android:layout_width="@dimen/size_axis"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal">
 
         <ImageView
@@ -53,12 +73,32 @@
             android:textSize="@dimen/size_text_axis_one"
             android:textColor="@color/white"/>
     </RelativeLayout>
-
     <RelativeLayout
-        android:layout_weight="5"
+        android:id="@+id/weightTruckLayout"
+        android:layout_weight="0.5"
         android:layout_width="@dimen/size_axis"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/v2"/>
+        <TextView
+            android:id="@+id/weightTruckText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/axis_2"
+        android:layout_below="@id/axis_1"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_width="@dimen/size_axis"
+        android:layout_height="0dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,10 +131,12 @@
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="5"
+        android:id="@+id/axis_3"
+        android:layout_below="@id/axis_2"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
         android:layout_width="@dimen/size_axis"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="0dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -127,10 +169,31 @@
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="5"
+        android:id="@+id/weightTrailerLayout"
+        android:layout_weight="0.5"
         android:layout_width="@dimen/size_axis"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/v2"/>
+        <TextView
+            android:id="@+id/weightTrailerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/axis_4"
+        android:layout_below="@id/axis_3"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:layout_width="@dimen/size_axis"
+        android:layout_height="0dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -163,10 +226,12 @@
             android:textColor="@color/white"/>
     </RelativeLayout>
     <RelativeLayout
-        android:layout_weight="5"
+        android:id="@+id/axis_5"
+        android:layout_below="@id/axis_4"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
         android:layout_width="@dimen/size_axis"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_height="0dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
