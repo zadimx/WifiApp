@@ -27,11 +27,83 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/v2"/>
         <TextView
-            android:id="@+id/weightAllText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+            android:text="N:"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightAllTextN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/pad_axis_sum"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightAllTextB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/pad_axis_sum"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="B:"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/weightTruckLayout"
+        android:layout_weight="0.5"
+        android:layout_width="@dimen/size_axis"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/v2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="N:"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightTruckTextN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/pad_axis_sum"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightTruckTextB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/pad_axis_sum"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="B:"
+            android:layout_centerInParent="true"
             android:textSize="@dimen/size_text_axis_one"
             android:textColor="@color/white"/>
     </RelativeLayout>
@@ -73,25 +145,7 @@
             android:textSize="@dimen/size_text_axis_one"
             android:textColor="@color/white"/>
     </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/weightTruckLayout"
-        android:layout_weight="0.5"
-        android:layout_width="@dimen/size_axis"
-        android:layout_height="0dp"
-        android:layout_gravity="center_horizontal">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/v2"/>
-        <TextView
-            android:id="@+id/weightTruckText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:textSize="@dimen/size_text_axis_one"
-            android:textColor="@color/white"/>
-    </RelativeLayout>
+
     <RelativeLayout
         android:id="@+id/axis_2"
         android:layout_below="@id/axis_1"
@@ -179,11 +233,37 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/v2"/>
         <TextView
-            android:id="@+id/weightTrailerText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+            android:text="N:"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightTrailerTextN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/pad_axis_sum"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/weightTrailerTextB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="@dimen/pad_axis_sum"
+            android:textSize="@dimen/size_text_axis_one"
+            android:textColor="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="B:"
+            android:layout_centerInParent="true"
             android:textSize="@dimen/size_text_axis_one"
             android:textColor="@color/white"/>
     </RelativeLayout>

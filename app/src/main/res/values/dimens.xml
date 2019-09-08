@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="size_axis">350dp</dimen>
-    <dimen name="pad_axis">8dp</dimen>
-    <dimen name="size_text_axis_one">25sp</dimen>
+    <dimen name="pad_axis">10dp</dimen>
+    <dimen name="pad_axis_sum">40dp</dimen>
+    <dimen name="size_text_axis_one">20dp</dimen>
     <dimen name="size_axis_sum">35sp</dimen>
 </resources>
