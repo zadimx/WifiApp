@@ -26,11 +26,11 @@ public class ViewAxisActivity extends AppCompatActivity {
     private static boolean flagStarWIFI = true;
 
     private final int weightTruck=12560;
-    private final int absoluteZeroTruck=3950;
+    private final int absoluteZeroTruck=4000;
     private final int weightTrailer=5620;
     private final int absoluteZeroTrailer=2400;
     private final int weightTrailerNotAxis=105;
-    private final double coeffTruck=2.055;
+    private final double coeffTruck=2.0425;
     private final double coeffTrailer=3.11894;
     private final double coeffTrailerAxis=2.1666;
 
