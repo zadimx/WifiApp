@@ -30,7 +30,7 @@ public class ViewAxisActivity extends AppCompatActivity {
     private final int weightTrailer=5620;
     private final int absoluteZeroTrailer=2400;
     private final double coeffTruck=2.055;
-    private final double coeffTrailer=2.055;
+    private final double coeffTrailer=2.125;
 
     private Thread thread;
     private Thread thread1;
@@ -249,10 +249,10 @@ public class ViewAxisActivity extends AppCompatActivity {
                             viewAxisSum3.setText(sumAxis[4]+sumAxis[5]+"");
                         }
                         if (sumAxis[6] != 0 && sumAxis[7] != 0) {
-                            viewAxisSum4.setText(sumAxis[6]*coeffTrailer+sumAxis[7]*coeffTrailer+"");
+                            viewAxisSum4.setText((int)((sumAxis[6]+sumAxis[7]+1200)*coeffTrailer)+"");
                         }
                         if (sumAxis[8] != 0 && sumAxis[9] != 0) {
-                            viewAxisSum5.setText(sumAxis[8]*coeffTrailer+sumAxis[9]*coeffTrailer+"");
+                            viewAxisSum5.setText((int)((sumAxis[6]+sumAxis[7]+1200)*coeffTrailer)+"");
                         }
 
                         if (sumAxis[2] != 0 && sumAxis[3] != 0 && sumAxis[4] != 0 && sumAxis[5] != 0) {
