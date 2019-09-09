@@ -252,9 +252,11 @@ public class ViewAxisActivity extends AppCompatActivity {
                         }
                         if (sumAxis[6] != 0 && sumAxis[7] != 0) {
                             viewAxisSum4.setText((int)((sumAxis[6]+sumAxis[7])*coeffTrailerAxis)+(weightTrailerNotAxis*2)+"");
+//                            viewAxisSum4.setText(sumAxis[6]+sumAxis[7]+"");
                         }
                         if (sumAxis[8] != 0 && sumAxis[9] != 0) {
                             viewAxisSum5.setText((int)((sumAxis[6]+sumAxis[7])*coeffTrailerAxis)+(weightTrailerNotAxis*2)+"");
+//                            viewAxisSum5.setText(sumAxis[6]+sumAxis[7]+"");
                         }
 
                         if (sumAxis[2] != 0 && sumAxis[3] != 0 && sumAxis[4] != 0 && sumAxis[5] != 0) {

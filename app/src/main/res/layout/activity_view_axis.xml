@@ -24,7 +24,8 @@
         android:layout_gravity="center_horizontal">
         <RelativeLayout
             android:layout_width="170dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -48,8 +49,7 @@
         </RelativeLayout>
     <RelativeLayout
         android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true">
+        android:layout_height="wrap_content">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -81,7 +81,8 @@
         android:layout_gravity="center_horizontal">
         <RelativeLayout
             android:layout_width="170dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -105,8 +106,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -252,7 +252,8 @@
         android:layout_gravity="center_horizontal">
         <RelativeLayout
             android:layout_width="170dp"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -276,8 +277,7 @@
         </RelativeLayout>
         <RelativeLayout
             android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true">
+            android:layout_height="wrap_content">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
