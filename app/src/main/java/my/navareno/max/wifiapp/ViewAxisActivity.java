@@ -29,8 +29,10 @@ public class ViewAxisActivity extends AppCompatActivity {
     private final int absoluteZeroTruck=3950;
     private final int weightTrailer=5620;
     private final int absoluteZeroTrailer=2400;
+    private final int weightTrailerNotAxis=105;
     private final double coeffTruck=2.055;
-    private final double coeffTrailer=2.125;
+    private final double coeffTrailer=3.11894;
+    private final double coeffTrailerAxis=2.1666;
 
     private Thread thread;
     private Thread thread1;
@@ -221,22 +223,22 @@ public class ViewAxisActivity extends AppCompatActivity {
                                 }
                                 if (weightNumberSensor == 7) {
                                     sumAxis[weightNumberSensor-1]=weightData;
-                                    weightData=(int)(weightData*coeffTrailer);
+                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisLeft4.setText(weightData+"");
                                 }
                                 if (weightNumberSensor == 8) {
                                     sumAxis[weightNumberSensor-1]=weightData;
-                                    weightData=(int)(weightData*coeffTrailer);
+                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisRight4.setText(weightData+"");
                                 }
                                 if (weightNumberSensor == 9) {
                                     sumAxis[weightNumberSensor-1]=weightData;
-                                    weightData=(int)(weightData*coeffTrailer);
+                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisLeft5.setText(weightData+"");
                                 }
                                 if (weightNumberSensor == 10) {
                                     sumAxis[weightNumberSensor-1]=weightData;
-                                    weightData=(int)(weightData*coeffTrailer);
+                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisRight5.setText(weightData+"");
                                 }
                         if (sumAxis[0] != 0 && sumAxis[1] != 0) {
@@ -249,10 +251,10 @@ public class ViewAxisActivity extends AppCompatActivity {
                             viewAxisSum3.setText(sumAxis[4]+sumAxis[5]+"");
                         }
                         if (sumAxis[6] != 0 && sumAxis[7] != 0) {
-                            viewAxisSum4.setText((int)((sumAxis[6]+sumAxis[7]+1200)*coeffTrailer)+"");
+                            viewAxisSum4.setText((int)((sumAxis[6]+sumAxis[7])*coeffTrailerAxis)+(weightTrailerNotAxis*2)+"");
                         }
                         if (sumAxis[8] != 0 && sumAxis[9] != 0) {
-                            viewAxisSum5.setText((int)((sumAxis[6]+sumAxis[7]+1200)*coeffTrailer)+"");
+                            viewAxisSum5.setText((int)((sumAxis[6]+sumAxis[7])*coeffTrailerAxis)+(weightTrailerNotAxis*2)+"");
                         }
 
                         if (sumAxis[2] != 0 && sumAxis[3] != 0 && sumAxis[4] != 0 && sumAxis[5] != 0) {
