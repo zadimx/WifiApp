@@ -195,7 +195,7 @@ public class ViewAxisActivity extends AppCompatActivity {
                                 int weight = Integer.parseInt(s);
                                 int weightNumberSensor = (0xffff0000 & weight) >> 16;
                                 int weightData = 0x0000ffff & weight;
-
+//sdfdsfsdfsfsfs
 //                                weightData = (int) (-862.5 + 1.725 * weightData);
                                 if (weightNumberSensor == 1) {
                                     viewAxisLeft1.setText(weightData+"");
