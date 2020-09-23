@@ -30,6 +30,31 @@ public class ViewAxisActivity extends AppCompatActivity {
     private static double constCoefTrailerA = 3.06;
     private static double constCoefTrailerB = -551.429;
 
+
+
+    private static double constA1 = 4.176;
+    private static double constA2 = 4.144;
+    private static double constA3 = 3.154;
+    private static double constA4 = 3.248;
+    private static double constA5 = 3.153;
+    private static double constA6 = 3.277;
+    private static double constA7 = 2.968;
+    private static double constA8 = 2.968;
+    private static double constA9 = 2.968;
+    private static double constA10 = 2.979;
+
+    private static double constB1 = -2077;
+    private static double constB2 = -2039;
+    private static double constB3 = -326.169;
+    private static double constB4 = -504.893;
+    private static double constB5 = -326.236;
+    private static double constB6 = -616.996;
+    private static double constB7 = -386.565;
+    private static double constB8 = -386.565;
+    private static double constB9 = -551.565;
+    private static double constB10 = -584.101;
+
+
     private static int axisLeft1 = 0;
     private static int axisRight1 = 0;
     private static int axisLeft2 = 0;
@@ -212,55 +237,55 @@ public class ViewAxisActivity extends AppCompatActivity {
                                 int weightData = 0x0000ffff & weight;
 //                                weightData = (int) (-862.5 + 1.725 * weightData);
                                 if (weightNumberSensor == 1) {
-                                    axisLeft1 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisLeft1 = (int) (constA1*weightData + constB1);
                                     viewAxisLeft1.setText(axisLeft1+"");
                                     sumAxis[weightNumberSensor-1]=axisLeft1;
                                 }
                                 if (weightNumberSensor == 2) {
-                                    axisRight1 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisRight1 = (int) (constA2*weightData + constB2);
                                     viewAxisRight1.setText(axisRight1+"");
                                     sumAxis[weightNumberSensor-1]=axisRight1;
                                 }
                                 if (weightNumberSensor == 3) {
-                                    axisLeft2 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisLeft2 = (int) (constA3*weightData + constB3);
                                     viewAxisLeft2.setText(axisLeft2+"");
                                     sumAxis[weightNumberSensor-1]=axisLeft2;
                                 }
                                 if (weightNumberSensor == 4) {
-                                    axisRight2 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisRight2 = (int) (constA4*weightData + constB4);
                                     viewAxisRight2.setText(axisRight2+"");
                                     sumAxis[weightNumberSensor-1]=axisRight2;
                                 }
                                 if (weightNumberSensor == 5) {
-                                    axisLeft3 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisLeft3 = (int) (constA5*weightData + constB5);
                                     viewAxisLeft3.setText(axisLeft3+"");
                                     sumAxis[weightNumberSensor-1]=axisLeft3;
                                 }
                                 if (weightNumberSensor == 6) {
-                                    axisRight3 = (int) (constCoefTrackA*weightData + constCoefTrackB);
+                                    axisRight3 = (int) (constA6*weightData + constB6);
                                     viewAxisRight3.setText(axisRight3+"");
                                     sumAxis[weightNumberSensor-1]=axisRight3;
                                 }
                                 if (weightNumberSensor == 7) {
-                                    axisLeft4 = (int) (constCoefTrailerA*weightData + constCoefTrailerB);
+                                    axisLeft4 = (int) (constA7*weightData + constB7);
                                     sumAxis[weightNumberSensor-1]=axisLeft4;
 //                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisLeft4.setText(axisLeft4+"");
                                 }
                                 if (weightNumberSensor == 8) {
-                                    axisRight4 = (int) (constCoefTrailerA*weightData + constCoefTrailerB);
+                                    axisRight4 = (int) (constA8*weightData + constB8);
                                     sumAxis[weightNumberSensor-1]=axisRight4;
 //                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisRight4.setText(axisRight4+"");
                                 }
                                 if (weightNumberSensor == 9) {
-                                    axisLeft5 = (int) (constCoefTrailerA*weightData + constCoefTrailerB);
+                                    axisLeft5 = (int) (constA9*weightData + constB9);
                                     sumAxis[weightNumberSensor-1]=axisLeft5;
 //                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisLeft5.setText(axisLeft5+"");
                                 }
                                 if (weightNumberSensor == 10) {
-                                    axisRight5 = (int) (constCoefTrailerA*weightData + constCoefTrailerB);
+                                    axisRight5 = (int) (constA10*weightData + constB10);
                                     sumAxis[weightNumberSensor-1]=axisRight5;
 //                                    weightData=(int)(weightData*coeffTrailerAxis+weightTrailerNotAxis);
                                     viewAxisRight5.setText(axisRight5+"");
@@ -290,9 +315,9 @@ public class ViewAxisActivity extends AppCompatActivity {
 //                            }
 //                            else {
 //                                weightTruckTextN.setText((int)(((sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5])-absoluteZeroTruck) * coeffTruck) + "");
-                                weightTruckTextN.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5]) + "");
+                                weightTruckTextN.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5])-weightTruck + "");
 //                                weightTruckTextB.setText((int)(((sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5])-absoluteZeroTruck) * coeffTruck)+weightTruck + "");
-                                weightTruckTextB.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5])+weightTruck + "");
+                                weightTruckTextB.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5]) + "");
 //                            }
                         }
                         if (sumAxis[6] != 0 && sumAxis[7] != 0 && sumAxis[8] != 0 && sumAxis[9] != 0) {
@@ -302,9 +327,9 @@ public class ViewAxisActivity extends AppCompatActivity {
 //                            }
 //                            else {
 //                                weightTrailerTextN.setText((int)(((sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])-absoluteZeroTrailer) * coeffTrailer) + "");
-                                weightTrailerTextN.setText((int)(sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9]) + "");
+                                weightTrailerTextN.setText((int)(sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])-weightTrailer + "");
 //                                weightTrailerTextB.setText((int)(((sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])-absoluteZeroTrailer) * coeffTrailer)+weightTrailer + "");
-                                weightTrailerTextB.setText((int)(sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])+weightTrailer + "");
+                                weightTrailerTextB.setText((int)(sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9]) + "");
 //                            }
                         }
                         if (sumAxis[0] != 0 && sumAxis[1] != 0 && sumAxis[2] != 0 && sumAxis[3] != 0
@@ -316,9 +341,9 @@ public class ViewAxisActivity extends AppCompatActivity {
 //                            }
 //                            else if ((sumAxis[2]+sumAxis[3]+sumAxis[4]+sumAxis[5]) < absoluteZeroTruck) {
 //                                weightAllTextN.setText((int)(((sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])-absoluteZeroTrailer) * coeffTrailer)+"");
-                                weightAllTextN.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5] + sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])+"");
+                                weightAllTextN.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5] + sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9]) - weightTruck - weightTrailer+"");
 //                                weightAllTextB.setText((int)(((sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])-absoluteZeroTrailer) * coeffTrailer)+weightTrailer+"");
-                                weightAllTextB.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5] + sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])+ weightTruck + weightTrailer+"");
+                                weightAllTextB.setText((int)(sumAxis[0]+sumAxis[1]+sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5] + sumAxis[6] + sumAxis[7] + sumAxis[8] + sumAxis[9])+ "");
 //                            }
 //                            else if ((sumAxis[6]+sumAxis[7]+sumAxis[8]+sumAxis[9]) < absoluteZeroTrailer) {
 //                                weightAllTextN.setText((int)(((sumAxis[2] + sumAxis[3] + sumAxis[4] + sumAxis[5])-absoluteZeroTruck) * coeffTruck)+"");
